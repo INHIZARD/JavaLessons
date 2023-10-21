@@ -1,4 +1,4 @@
-package Lesson2.Task6;
+package lesson2.task6;
 
 public class CircleTest {
     public static void main(String[] args) {

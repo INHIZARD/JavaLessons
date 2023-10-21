@@ -1,4 +1,4 @@
-package Lesson3.MathAndRandom.Task2;
+package lesson3.math_and_random.task2;
 
 public class Test {
     public static void main(String[] args) throws CloneNotSupportedException {

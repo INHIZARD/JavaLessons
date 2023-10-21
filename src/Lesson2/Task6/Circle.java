@@ -1,6 +1,4 @@
-package Lesson2.Task6;
-
-import java.util.Objects;
+package lesson2.task6;
 
 public class Circle {
     private final double PI = Math.PI;

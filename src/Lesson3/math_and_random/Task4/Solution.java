@@ -1,4 +1,4 @@
-package Lesson3.MathAndRandom.Task4;
+package lesson3.math_and_random.task4;
 
 import java.util.Arrays;
 import java.util.Scanner;

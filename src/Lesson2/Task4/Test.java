@@ -1,4 +1,4 @@
-package Lesson2.Task4;
+package lesson2.task4;
 
 import java.util.Scanner;
 
@@ -17,10 +17,8 @@ public class Test {
                 """);
         while (open){
             System.out.print("\nВведите действие: ");
-            try{
-                Scanner scanner = new Scanner(System.in);
+            try (Scanner scanner = new Scanner(System.in)) {
                 int action = scanner.nextInt();
-
                 String name;
                 int price;
                 switch (action) {

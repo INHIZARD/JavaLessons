@@ -1,4 +1,4 @@
-package Lesson2.Task5;
+package lesson2.task5;
 
 public class Test {
     public static void main(String[] args) throws Exception {

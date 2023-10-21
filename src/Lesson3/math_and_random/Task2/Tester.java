@@ -1,4 +1,4 @@
-package Lesson3.MathAndRandom.Task2;
+package lesson3.math_and_random.task2;
 
 import java.util.Arrays;
 import java.util.Comparator;

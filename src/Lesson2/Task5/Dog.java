@@ -1,4 +1,4 @@
-package Lesson2.Task5;
+package lesson2.task5;
 
 public class Dog {
     private String name;

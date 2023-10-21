@@ -1,4 +1,4 @@
-package Lesson2.Task9;
+package lesson2.task9;
 
 import java.util.ArrayList;
 import java.util.Collections;

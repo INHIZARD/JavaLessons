@@ -1,7 +1,8 @@
-package Lesson2.Task7;
+package lesson2.task7;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Optional;
 
 public class Bookshelf {
     private Book[] books;
@@ -14,13 +15,21 @@ public class Bookshelf {
 
     public Book earliestBook(){
         Book earliest = new Book(null, null, 2024);
-        for (Book b: books) if (b.getDateOfWriting() < earliest.getDateOfWriting()) earliest = b;
+        for (Book b: books) {
+            if (b.getDateOfWriting() < earliest.getDateOfWriting()) {
+                earliest = b;
+            }
+        }
         return earliest;
     }
 
     public Book latestBook(){
         Book latest = new Book(null, null, 0);
-        for (Book b: books) if (b.getDateOfWriting() > latest.getDateOfWriting()) latest = b;
+        for (Book b: books) {
+            if (b.getDateOfWriting() > latest.getDateOfWriting()) {
+                latest = b;
+            }
+        }
         return latest;
     }
 
