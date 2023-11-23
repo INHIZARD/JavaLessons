@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shop implements INewComputer {
-    private List<Computer> computers = new ArrayList<>();
+    private final List<Computer> computers = new ArrayList<>();
 
     @Override
     public void addComputer(Computer computer) {
@@ -27,8 +27,10 @@ public class Shop implements INewComputer {
     @Override
     public List<Computer> findComputer(Computer computer) {
         List<Computer> foundComputers = new ArrayList<>();
-        for (Computer comp: computers){
-            if (computer.equals(comp)) foundComputers.add(comp);
+        for (Computer comp: computers) {
+            if (computer.equals(comp)) {
+                foundComputers.add(comp);
+            }
         }
         return foundComputers;
     }
@@ -36,8 +38,10 @@ public class Shop implements INewComputer {
     @Override
     public List<Computer> findComputer(String name) {
         List<Computer> foundComputers = new ArrayList<>();
-        for (Computer comp: computers){
-            if (name.equals(comp.getName())) foundComputers.add(comp);
+        for (Computer comp: computers) {
+            if (name.equals(comp.getName())) {
+                foundComputers.add(comp);
+            }
         }
         return foundComputers;
     }
@@ -45,8 +49,10 @@ public class Shop implements INewComputer {
     @Override
     public List<Computer> findComputer(int price) {
         List<Computer> foundComputers = new ArrayList<>();
-        for (Computer comp: computers){
-            if (price == comp.getPrice()) foundComputers.add(comp);
+        for (Computer comp: computers) {
+            if (price == comp.getPrice()) {
+                foundComputers.add(comp);
+            }
         }
         return foundComputers;
     }

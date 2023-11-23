@@ -1,6 +1,6 @@
 package lesson3.math_and_random.task2;
 
-public class Point implements Cloneable {
+public class Point {
     private int x;
     private int y;
 
@@ -28,11 +28,6 @@ public class Point implements Cloneable {
 
     public void setY(int y) {
         this.y = y;
-    }
-
-    @Override
-    protected Point clone() throws CloneNotSupportedException {
-        return (Point) super.clone();
     }
 
     @Override

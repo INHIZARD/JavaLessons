@@ -6,10 +6,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Poker {
+    private static final String[] SUIT = {"Бубен", "Червей", "Пик", "Крести"};
+    private static final String[] VALUE = {
+            "2", "3", "4", "5", "6", "7", "8", "9", "10",
+            "Валет", "Дама", "Король", "Туз"
+    };
+    private static final int CARDS_FOR_PLAYER = 5;
+
     public static void main(String[] args) {
-        final String[] SUIT = {"Бубен", "Червей", "Пик", "Крести"};
-        final String[] VALUE = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Валет", "Дама", "Король", "Туз"};
-        final int CARDS_FOR_PLAYER = 5;
 
         List<String> cards = new ArrayList<>(SUIT.length * VALUE.length);
         for (String suit : SUIT) {

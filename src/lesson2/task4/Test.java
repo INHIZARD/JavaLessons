@@ -15,7 +15,7 @@ public class Test {
                 4. Посмотреть содержание магазина
                 5. Закрыть магазин
                 """);
-        while (open){
+        while (open) {
             System.out.print("\nВведите действие: ");
             try (Scanner scanner = new Scanner(System.in)) {
                 int action = scanner.nextInt();
@@ -77,7 +77,7 @@ public class Test {
                 }
             }
             catch (Exception e){
-                System.out.println("Неверное действие ");
+                System.out.println("Неверное действие!");
             }
         }
     }

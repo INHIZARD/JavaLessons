@@ -1,7 +1,7 @@
 package lesson2.task5;
 
 public class Test {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         try {
             Dog dog1 = new Dog("Bob", 10);
             Dog dog2 = new Dog("Lil", 14);

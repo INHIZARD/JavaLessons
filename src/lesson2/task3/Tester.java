@@ -6,7 +6,7 @@ public class Tester {
     private Circle[] circles;
     private int countOfCircles;
 
-    Tester(Circle[] circles, int countOfCircles){
+    Tester(Circle[] circles, int countOfCircles) {
         this.circles = circles;
         this.countOfCircles = countOfCircles;
     }

@@ -1,6 +1,6 @@
 package lesson3.math_and_random.task2;
 
-public class Circle implements Cloneable{
+public class Circle {
     private Point center;
     private int radius;
 
@@ -28,13 +28,6 @@ public class Circle implements Cloneable{
 
     public void setRadius(int radius) {
         this.radius = radius;
-    }
-
-    @Override
-    protected Circle clone() throws CloneNotSupportedException {
-        Circle newCircle = (Circle) super.clone();
-        newCircle.center = center.clone();
-        return newCircle;
     }
 
     @Override

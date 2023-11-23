@@ -6,13 +6,13 @@ public class Circle {
     private Point center;
     private int radius;
 
-    Circle(Point center, int radius){
+    Circle(Point center, int radius) {
         this.center = center;
         this.radius = radius;
     }
 
-    public Point getCenter() throws CloneNotSupportedException {
-        return center.clone();
+    public Point getCenter() {
+        return center;
     }
 
     public void setCenter(Point center) {
@@ -37,15 +37,13 @@ public class Circle {
 
     @Override
     public boolean equals(Object o) {
-        try {
-            if (this == o) return true;
-            if (!(o instanceof Circle circle)) return false;
-            return getRadius() == circle.getRadius() && getCenter().equals(circle.getCenter());
+        if (this == o) {
+            return true;
         }
-        catch (CloneNotSupportedException e){
-            System.out.println(e.getMessage());
+        if (!(o instanceof Circle circle)) {
             return false;
         }
+        return getRadius() == circle.getRadius() && getCenter().equals(circle.getCenter());
     }
 
     @Override
@@ -56,10 +54,11 @@ public class Circle {
                 '}';
     }
 
-    static class Point implements Cloneable{
+    static class Point {
         private int x;
         private int y;
-        Point(int x, int y){
+
+        Point(int x, int y) {
             this.x = x;
             this.y = y;
         }
@@ -78,11 +77,6 @@ public class Circle {
 
         public void setY(int y) {
             this.y = y;
-        }
-
-        @Override
-        protected Point clone() throws CloneNotSupportedException {
-            return (Point) super.clone();
         }
 
         @Override

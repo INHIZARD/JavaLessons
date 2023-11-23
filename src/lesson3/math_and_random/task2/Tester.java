@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class Tester{
-    private Circle[] circles;
-    private int countOfCircles;
+    private final Circle[] circles;
+    private final int countOfCircles;
 
     Tester(int countOfCircles){
         circles = new Circle[countOfCircles];
@@ -21,20 +21,24 @@ public class Tester{
         return countOfCircles;
     }
 
-    public Circle findTheBiggestCircle() throws CloneNotSupportedException {
+    public Circle findTheBiggestCircle() {
         Circle theBiggest = new Circle(new Point(), 0);
         for (Circle circle: circles){
-            if (circle.getRadius() > theBiggest.getRadius()) theBiggest = circle;
+            if (circle.getRadius() > theBiggest.getRadius()) {
+                theBiggest = circle;
+            }
         }
-        return theBiggest.clone();
+        return theBiggest;
     }
 
-    public Circle findTheSmallestCircle() throws CloneNotSupportedException {
+    public Circle findTheSmallestCircle() {
         Circle theSmallest = new Circle(new Point(), 30);
         for (Circle circle : circles) {
-            if (circle.getRadius() < theSmallest.getRadius()) theSmallest = circle;
+            if (circle.getRadius() < theSmallest.getRadius()) {
+                theSmallest = circle;
+            }
         }
-        return theSmallest.clone();
+        return theSmallest;
     }
 
     public void sort(){

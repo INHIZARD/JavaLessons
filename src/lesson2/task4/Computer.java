@@ -6,7 +6,7 @@ public class Computer {
     private String name;
     private int price;
 
-    Computer(String name, int price){
+    Computer(String name, int price) {
         this.name = name;
         this.price = price;
     }

@@ -5,27 +5,28 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int arrayLength = length(scanner);
-        scanner.close();
-
-        int[] array = new int[arrayLength];
-        int evenElements = 0;
-        for (int i = 0; i < arrayLength; i++) {
-            array[i] = (int) (Math.random() * (arrayLength + 1));
-            if ((array[i] & 1) == 0) evenElements += 1;
-        }
-        System.out.printf("Массив: %s\n", Arrays.toString(array));
-
-        int[] evenArray = new int[evenElements];
-        int it = 0;
-        for (int i = 0; i < arrayLength; i++) {
-            if ((array[i] & 1) == 0) {
-                evenArray[it] = array[i];
-                it++;
+        try (Scanner scanner = new Scanner(System.in)) {
+            int arrayLength = length(scanner);
+            int[] array = new int[arrayLength];
+            int evenElements = 0;
+            for (int i = 0; i < arrayLength; i++) {
+                array[i] = (int) (Math.random() * (arrayLength + 1));
+                if ((array[i] & 1) == 0) {
+                    evenElements += 1;
+                }
             }
+            System.out.printf("Массив: %s\n", Arrays.toString(array));
+
+            int[] evenArray = new int[evenElements];
+            int it = 0;
+            for (int i = 0; i < arrayLength; i++) {
+                if ((array[i] & 1) == 0) {
+                    evenArray[it] = array[i];
+                    it++;
+                }
+            }
+            System.out.printf("Массив из четных элементов: %s\n", Arrays.toString(evenArray));
         }
-        System.out.printf("Массив из четных элементов: %s\n", Arrays.toString(evenArray));
     }
 
     public static int length(Scanner scanner){

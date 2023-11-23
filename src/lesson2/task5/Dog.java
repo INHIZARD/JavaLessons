@@ -5,7 +5,9 @@ public class Dog {
     private int age;
 
     Dog(String name, int age) throws Exception {
-        if (age < 0) throw new Exception("Неверный возраст для " + name);
+        if (age < 0) {
+            throw new Exception("Неверный возраст для " + name);
+        }
         this.name = name;
         this.age = age;
     }
