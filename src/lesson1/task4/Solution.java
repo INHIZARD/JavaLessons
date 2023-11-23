@@ -4,14 +4,12 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        try {
+        try (Scanner scanner = new Scanner(System.in);){
             System.out.println("Введите 5 чисел массива:");
-            Scanner scanner = new Scanner(System.in);
             int[] numbers = new int[5];
             for (int i = 0; i < numbers.length; i++) {
                 numbers[i] = scanner.nextInt();
             }
-            scanner.close();
 
             int it = 0;
             int maxValue = Integer.MIN_VALUE;
